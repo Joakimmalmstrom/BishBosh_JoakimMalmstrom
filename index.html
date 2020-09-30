@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BishBosh_JoakimMalmstrom</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 </head>
+
 <body>
-    <!--BishBosh Input-->
-    <form action>
-        <label for="loop">Loop Number:</label>
-        <input type="number" id="loop"><br><br>
+    <div class="container-fluid mt-3 ml-3">
+        <header>
+            <div class="jumbotron">
+                <h1 class="display-4">Bish-Bosch</h1>
+                <p class="lead"><p>The computer calculates through all your <b>Loop Numbers</b>.<br>
+                    If a number is divided by your <b>Bish Number</b>: <i>Bish</i> <br>
+                    If a number is divided by your <b>Bosh Number</b>: <i>Bosh</i> <br>
+                    If a number is divided by both your <b>Bish Number</b> & <b>Bosh Number</b>: <i>Bish-Bosh</i>
+                <hr class="my-4">
+                
+              </div>
+        </header>
+    
+        <!--BishBosh Input-->
+        <form action>
+            <label for="loop">Loop Number:</label>
+            <input type="number" min="0" id="loop"><br><br>
+    
+            <label for="bish">Bish Number:</label>
+            <input type="number" min="0" id="bish"><br><br>
+    
+            <label for="bosh">Bosh Number:</label>
+            <input type="number" min="0" id="bosh"><br><br>
+    
+            <button type="button" id="submit" class="btn btn-primary btn-lg">Play!</button>
+        </form>
 
-        <label for="bish">Bish Number:</label>
-        <input type="number" id="bish"><br><br>
 
-        <label for="bosh">Bosh Number:</label>
-        <input type="number" id="bosh"><br><br>
+    </div>
+    <footer>
+        <p class="center">&copy; Joakim Malmström</p>
+    </footer>
 
-        <input type="button" onclick="callBishBosh()" value="PLAY">
-      </form>
-      
+
     <script src="bishbosh.js"></script>
 </body>
+
 </html>
